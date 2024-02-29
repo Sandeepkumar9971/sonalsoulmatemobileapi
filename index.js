@@ -1,8 +1,8 @@
 const express = require('express')
-const connectDB = require('./model/dbconnection')
+const connectDB = require('./utils/dbconnection')
 const app = express()
 const cors = require('cors');
-const registerschema = require('./model/allusers')
+const registerschema = require('./utils/model/allusers')
 const PORT = 4000
 
 connectDB()

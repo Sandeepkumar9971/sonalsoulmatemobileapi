@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
-const {connectionstr}  =  require('./connectionstr')
+// const {connectionstr}  =  require('./connectionstr')
+const {connectionstr} =require('./connectionstr')
 
 let isConnected = false;
 
