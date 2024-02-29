@@ -12,7 +12,7 @@ app.get('/home', (req, res) => {
 })
 app.get('/allusers', async (req,resp) => {
     const alluserdata = await registerschema.find({})
-    resp.json(JSON.stringify(alluserdata))
+    resp.json(alluserdata)
 })
 
 app.listen(PORT, () => {
