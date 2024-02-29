@@ -13,11 +13,12 @@ app.get('/home', (req, res) => {
   res.status(200).json('Welcome, your app is working well');
 })
 app.post('/addprofile',async(req,resp)=>{
-
-})
-app.get('/allusers', async (req,resp) => {
     const {userData} = req.body
     console.log(userData)
+    resp.send('sucessfull')
+})
+app.get('/allusers', async (req,resp) => {
+   
     const alluserdata = await registerschema.find({})
     resp.json(alluserdata)
 })
