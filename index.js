@@ -7,10 +7,17 @@ const PORT = 4000
 
 connectDB()
 app.use(cors())
+app.use(express.json())
+
 app.get('/home', (req, res) => {
   res.status(200).json('Welcome, your app is working well');
 })
+app.post('/addprofile',async(req,resp)=>{
+
+})
 app.get('/allusers', async (req,resp) => {
+    const {userData} = req.body
+    console.log(userData)
     const alluserdata = await registerschema.find({})
     resp.json(alluserdata)
 })
